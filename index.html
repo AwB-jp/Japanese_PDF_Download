@@ -47,6 +47,10 @@
         p {
             text-align: center;
         }
+        .comments-section {
+            max-width: 600px;
+            margin: 40px auto 0;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +62,27 @@
         <a href="pdfs/Lesson_plans.pdf" download>Download Lesson Plans</a>
         <a href="pdfs/Hiragana_practice.pdf" download>Download Hiragana Practice</a>
         <a href="pdfs/Hiragana_chart.pdf" download>Download Hiragana Chart</a>
+        <!-- New PDF links -->
+        <a href="pdfs/First_20_letters_hiragana.pdf" download>Download First 20 Letters Hiragana</a>
+        <a href="pdfs/Last_30_letters_hiragana.pdf" download>Download Last 30 Letters Hiragana</a>
+        <a href="pdfs/Katakana_practice.pdf" download>Download Katakana Practice</a>
+        <a href="pdfs/Hiragana_meaning.pdf" download>Download Hiragana Meaning</a>
     </div>
+
+    <!-- Disqus Comment Section -->
+    <div class="comments-section">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script>
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';  // Replace YOUR_DISQUS_SHORTNAME with your Disqus shortname
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+
 </body>
 </html>
