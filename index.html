@@ -6,83 +6,105 @@
     <title>Download PDF Files</title>
     <style>
         body {
-            font-family: "Garamond", serif; /* Updated to Garamond font */
-            margin: 20px;
-            background-color: #82c267; /* Updated background color */
+            font-family: "Garamond", serif; /* Professional font */
+            margin: 0;
+            padding: 0;
+            background-color: #82c267; /* Pleasant background color */
+            color: #333; /* Darker text for better contrast */
         }
-        h1 {
-            color: #fff;
+        header {
+            background-color: #5a8f3b; /* Darker green for header */
+            padding: 20px;
             text-align: center;
         }
-        h2 {
+        header h2 {
             color: #fff;
-            text-align: center;
             font-size: 36px;
-            margin-bottom: 10px;
+            margin: 0;
         }
-        h3 {
+        header h3 {
             color: #fff;
-            text-align: center;
-            font-size: 18px; /* Smaller font size for the subheading */
-            margin-bottom: 20px;
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-            display: block;
-            margin-bottom: 10px;
             font-size: 18px;
-        }
-        a:hover {
-            color: darkblue;
+            margin-top: 10px;
+            font-weight: normal;
         }
         .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        p {
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #5a8f3b;
+            margin-bottom: 20px;
+        }
+        .download-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .download-list li {
+            margin-bottom: 15px;
             text-align: center;
         }
-        .comments-section {
-            max-width: 600px;
-            margin: 40px auto 0;
+        .download-button {
+            display: inline-block;
+            background-color: #5a8f3b;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .download-button:hover {
+            background-color: #467a2e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5a8f3b;
+            color: #fff;
+            margin-top: 40px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h2>教材関係</h2> <!-- Japanese Header "教材関係" -->
-    <h3>教材をここからダウンロードしてください！何か改善点などがあれば一声ください！！</h3> <!-- Subheading with smaller font -->
-    <div class="container">
-        <h1>Download PDF Files</h1>
-        <p>Click the links below to download the PDF files:</p>
-        <a href="pdfs/Lesson_plans.pdf" download>Download Lesson Plans</a>
-        <a href="pdfs/Hiragana_practice.pdf" download>Download Hiragana Practice</a>
-        <a href="pdfs/Hiragana_chart.pdf" download>Download Hiragana Chart</a>
-        <!-- New PDF links -->
-        <a href="pdfs/First_20_letters_hiragana.pdf" download>Download First 20 Letters Hiragana</a>
-        <a href="pdfs/Last_30_letters_hiragana.pdf" download>Download Last 30 Letters Hiragana</a>
-        <a href="pdfs/Katakana_practice.pdf" download>Download Katakana Practice</a>
-        <a href="pdfs/Hiragana_meaning.pdf" download>Download Hiragana Meaning</a>
-    </div>
 
-    <!-- Disqus Comment Section -->
-    <div class="comments-section">
-        <h2>Comments</h2>
-        <div id="disqus_thread"></div>
-        <script>
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';  // Replace YOUR_DISQUS_SHORTNAME with your Disqus shortname
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
+<header>
+    <h2>教材関係</h2> <!-- Japanese Header -->
+    <h3>教材をここからダウンロードしてください！何か改善点などがあれば一声ください！！</h3> <!-- Subheading -->
+</header>
+
+<div class="container">
+    <h1>Download PDF Files</h1>
+    <ul class="download-list">
+        <li><a href="pdfs/Lesson_plans.pdf" download class="download-button">Download Lesson Plans</a></li>
+        <li><a href="pdfs/Hiragana_practice.pdf" download class="download-button">Download Hiragana Practice</a></li>
+        <li><a href="pdfs/Hiragana_chart.pdf" download class="download-button">Download Hiragana Chart</a></li>
+        <li><a href="pdfs/First_20_letters_hiragana.pdf" download class="download-button">Download First 20 Letters Hiragana</a></li>
+        <li><a href="pdfs/Last_30_letters_hiragana.pdf" download class="download-button">Download Last 30 Letters Hiragana</a></li>
+        <li><a href="pdfs/Katakana_practice.pdf" download class="download-button">Download Katakana Practice</a></li>
+        <li><a href="pdfs/Hiragana_meaning.pdf" download class="download-button">Download Hiragana Meaning</a></li>
+    </ul>
+</div>
+
+<footer>
+    &copy; 2024 教材関係 - All Rights Reserved
+</footer>
 
 </body>
 </html>
