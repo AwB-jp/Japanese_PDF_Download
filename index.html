@@ -50,18 +50,31 @@
             margin-bottom: 15px;
             text-align: center;
         }
-        .download-button {
+        .button-group {
             display: inline-block;
-            background-color: #5a8f3b;
-            color: #fff;
+        }
+        .download-button, .preview-button {
+            display: inline-block;
             padding: 12px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 16px;
+            margin: 5px;
             transition: background-color 0.3s ease;
+        }
+        .download-button {
+            background-color: #5a8f3b;
+            color: #fff;
         }
         .download-button:hover {
             background-color: #467a2e;
+        }
+        .preview-button {
+            background-color: #3b7e5a;
+            color: #fff;
+        }
+        .preview-button:hover {
+            background-color: #2f6248;
         }
         footer {
             text-align: center;
@@ -69,6 +82,15 @@
             background-color: #5a8f3b;
             color: #fff;
             margin-top: 40px;
+            position: relative;
+        }
+        /* Version number in the bottom-left corner */
+        .version {
+            font-size: 12px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
         }
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -92,18 +114,54 @@
 <div class="container">
     <h1>Download PDF Files</h1>
     <ul class="download-list">
-        <li><a href="pdfs/Lesson_plans.pdf" download class="download-button">Download Lesson Plans</a></li>
-        <li><a href="pdfs/Hiragana_practice.pdf" download class="download-button">Download Hiragana Practice</a></li>
-        <li><a href="pdfs/Hiragana_chart.pdf" download class="download-button">Download Hiragana Chart</a></li>
-        <li><a href="pdfs/First_20_letters_hiragana.pdf" download class="download-button">Download First 20 Letters Hiragana</a></li>
-        <li><a href="pdfs/Last_30_letters_hiragana.pdf" download class="download-button">Download Last 30 Letters Hiragana</a></li>
-        <li><a href="pdfs/Katakana_practice.pdf" download class="download-button">Download Katakana Practice</a></li>
-        <li><a href="pdfs/Hiragana_meaning.pdf" download class="download-button">Download Hiragana Meaning</a></li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/Lesson_plans.pdf" download class="download-button">Download Lesson Plans</a>
+                <a href="pdfs/Lesson_plans.pdf" target="_blank" class="preview-button">Preview Lesson Plans</a>
+            </div>
+        </li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/Hiragana_practice.pdf" download class="download-button">Download Hiragana Practice</a>
+                <a href="pdfs/Hiragana_practice.pdf" target="_blank" class="preview-button">Preview Hiragana Practice</a>
+            </div>
+        </li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/Hiragana_chart.pdf" download class="download-button">Download Hiragana Chart</a>
+                <a href="pdfs/Hiragana_chart.pdf" target="_blank" class="preview-button">Preview Hiragana Chart</a>
+            </div>
+        </li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/First_20_letters_hiragana.pdf" download class="download-button">Download First 20 Letters Hiragana</a>
+                <a href="pdfs/First_20_letters_hiragana.pdf" target="_blank" class="preview-button">Preview First 20 Letters Hiragana</a>
+            </div>
+        </li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/Last_30_letters_hiragana.pdf" download class="download-button">Download Last 30 Letters Hiragana</a>
+                <a href="pdfs/Last_30_letters_hiragana.pdf" target="_blank" class="preview-button">Preview Last 30 Letters Hiragana</a>
+            </div>
+        </li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/Katakana_practice.pdf" download class="download-button">Download Katakana Practice</a>
+                <a href="pdfs/Katakana_practice.pdf" target="_blank" class="preview-button">Preview Katakana Practice</a>
+            </div>
+        </li>
+        <li>
+            <div class="button-group">
+                <a href="pdfs/Hiragana_meaning.pdf" download class="download-button">Download Hiragana Meaning</a>
+                <a href="pdfs/Hiragana_meaning.pdf" target="_blank" class="preview-button">Preview Hiragana Meaning</a>
+            </div>
+        </li>
     </ul>
 </div>
 
 <footer>
     &copy; 2024 教材関係 - All Rights Reserved
+    <span class="version">Version: 0.0.4</span> <!-- Version number -->
 </footer>
 
 </body>
